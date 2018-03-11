@@ -1,6 +1,34 @@
 body {
   max-width: 100%; }
 
+#header {
+  background-image: url("../images/shopshelf.jpeg");
+  background-position: center;
+  color: #eee; }
+  #header h1 {
+    color: #eee; }
+
+#haircutimg {
+  background-image: url("../images/haircut.jpeg"); }
+
+#beardtrimming {
+  background-image: url("../images/beardtrimming.jpeg"); }
+
+#hotshaving {
+  background-image: url("../images/hotshaving.jpeg"); }
+
+#opening {
+  background-image: url("../images/shopfloor.jpg");
+  color: #eee; }
+  #opening h1, #opening h2 {
+    color: #eee; }
+
+footer {
+  background-color: #333;
+  color: #eee; }
+  footer h1, footer h2, footer h3, footer h4, footer h5 {
+    color: #eee; }
+
 /* THE WIDTH LIMITER FOR CONTENT */
 .container {
   max-width: 1200px;
@@ -9,28 +37,67 @@ body {
 .section {
   padding: 30px;
   /*REMOVE*/
-  border: 1px solid black; }
-  .section.section_centered {
+  border: 1px solid #111; }
+  .section.section-centered {
     text-align: center; }
+  .section.section-large {
+    padding: 200px 30px; }
 
 .flex {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around; }
   .flex .flex_item {
-    border: 1px solid black;
-    border-radius: 3px;
-    margin: 0 15px;
+    margin: 15px;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0; }
   .flex.flex-centrealign {
     align-items: center; }
 
-footer {
-  background-color: #333;
-  color: #eee; }
-  footer h1, footer h2, footer h3, footer h4, footer h5 {
-    color: #eee; }
+.navbar {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.65);
+  width: 100%; }
+  .navbar li {
+    display: inline-block; }
+    .navbar li a {
+      color: #eee; }
+      .navbar li a:hover {
+        color: #333; }
+
+.imgcontainer {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+
+.imgcontainer img {
+  min-width: 100%;
+  min-height: 100%; }
+
+.centered {
+  text-align: center; }
+
+.shaded {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6); }
+
+.fixed {
+  background-attachment: fixed; }
+
+.img-rounded {
+  border-radius: 50%; }
+
+.service {
+  max-width: 370px; }
+  .service .imgcontainer {
+    width: 270px;
+    height: 270px;
+    margin: auto; }
+
+.day {
+  border: 1px solid #eee;
+  transition: transform .1s ease-in-out; }
+  .day:hover {
+    transform: scale(1.05); }
 
 /*# sourceMappingURL=custom.css.map */

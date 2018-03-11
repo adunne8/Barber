@@ -1,6 +1,48 @@
+$darkened: rgba(0,0,0,.65);
+$white: #eee;
+$black: #111;
+$darkgrey: #333;
+
 body{
     max-width: 100%;
 }
+
+
+#header{
+    background-image: url("../images/shopshelf.jpeg");
+    background-position: center;
+
+    color: $white;
+    h1{
+        color: $white;
+    }
+}
+#haircutimg{
+    background-image: url("../images/haircut.jpeg");
+}
+#beardtrimming{
+    background-image: url("../images/beardtrimming.jpeg");
+}
+#hotshaving{
+    background-image: url("../images/hotshaving.jpeg");
+}
+#opening{
+    background-image: url("../images/shopfloor.jpg");
+    color: $white;
+    h1, h2{
+        color: $white;
+    }
+}
+
+footer{
+    background-color: $darkgrey;
+    color: $white;
+    h1, h2, h3, h4, h5{
+        color: $white;
+    }
+}
+
+
 
 /* THE WIDTH LIMITER FOR CONTENT */
 .container{
@@ -12,9 +54,12 @@ body{
     padding: 30px;
 
     /*REMOVE*/
-    border: 1px solid black;
-    &.section_centered{
+    border: 1px solid $black;
+    &.section-centered{
         text-align: center;
+    }
+    &.section-large{
+        padding: 200px 30px;
     }
 }
 
@@ -27,9 +72,8 @@ body{
 
 
     .flex_item{
-        border: 1px solid black;
-        border-radius: 3px;
-        margin: 0 15px;
+
+        margin: 15px;
 
         flex-grow: 1;
         flex-shrink: 1;
@@ -40,10 +84,58 @@ body{
     }
 }
 
-footer{
-    background-color: #333;
-    color: #eee;
-    h1, h2, h3, h4, h5{
-        color: #eee;
+.navbar{
+    position: fixed;
+    background-color: $darkened;
+    width: 100%;
+
+    li{ 
+        display: inline-block;
+        a{
+            color: $white;
+            &:hover{
+                color: $darkgrey;
+            }
+        }
+    }
+}
+
+.imgcontainer{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.imgcontainer img{
+    min-width: 100%;
+    min-height: 100%;
+}
+.centered{
+    text-align: center;
+}
+.shaded{
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);
+}
+.fixed{
+    background-attachment: fixed;
+}
+.img-rounded{
+    border-radius: 50%;
+}
+
+.service{
+    max-width: 370px;
+    .imgcontainer{
+        width: 270px;
+        height: 270px;
+        margin: auto;
+    }
+}
+
+.day{
+    border: 1px solid $white;
+
+    transition: transform .1s ease-in-out;
+    &:hover{
+        transform: scale(1.05);
     }
 }
