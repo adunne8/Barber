@@ -2,6 +2,7 @@ $darkened: rgba(0,0,0,.65);
 $white: #eee;
 $black: #111;
 $darkgrey: #333;
+$accent: #E1B900;
 
 body{
     max-width: 100%;
@@ -11,11 +12,6 @@ body{
 #header{
     background-image: url("../images/shopshelf.jpeg");
     background-position: center;
-
-    color: $white;
-    h1{
-        color: $white;
-    }
 }
 #haircutimg{
     background-image: url("../images/haircut.jpeg");
@@ -28,10 +24,7 @@ body{
 }
 #opening{
     background-image: url("../images/shopfloor.jpg");
-    color: $white;
-    h1, h2{
-        color: $white;
-    }
+
 }
 
 footer{
@@ -60,6 +53,12 @@ footer{
     }
     &.section-large{
         padding: 200px 30px;
+    }
+    &.section-bg{
+        color: $white;
+        h1, h2{
+            color: $white;
+        }
     }
 }
 
@@ -91,12 +90,6 @@ footer{
 
     li{ 
         display: inline-block;
-        a{
-            color: $white;
-            &:hover{
-                color: $darkgrey;
-            }
-        }
     }
 }
 
@@ -137,5 +130,18 @@ footer{
     transition: transform .1s ease-in-out;
     &:hover{
         transform: scale(1.05);
+        color: $accent;
+        border-color: $accent;
+        h2{
+            color: $accent;
+        }
+    }
+}
+
+// FONT
+a{
+    color: $white;
+    &:hover{
+        color: $accent;
     }
 }

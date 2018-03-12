@@ -3,10 +3,7 @@ body {
 
 #header {
   background-image: url("../images/shopshelf.jpeg");
-  background-position: center;
-  color: #eee; }
-  #header h1 {
-    color: #eee; }
+  background-position: center; }
 
 #haircutimg {
   background-image: url("../images/haircut.jpeg"); }
@@ -18,10 +15,7 @@ body {
   background-image: url("../images/hotshaving.jpeg"); }
 
 #opening {
-  background-image: url("../images/shopfloor.jpg");
-  color: #eee; }
-  #opening h1, #opening h2 {
-    color: #eee; }
+  background-image: url("../images/shopfloor.jpg"); }
 
 footer {
   background-color: #333;
@@ -42,6 +36,10 @@ footer {
     text-align: center; }
   .section.section-large {
     padding: 200px 30px; }
+  .section.section-bg {
+    color: #eee; }
+    .section.section-bg h1, .section.section-bg h2 {
+      color: #eee; }
 
 .flex {
   display: flex;
@@ -61,10 +59,6 @@ footer {
   width: 100%; }
   .navbar li {
     display: inline-block; }
-    .navbar li a {
-      color: #eee; }
-      .navbar li a:hover {
-        color: #333; }
 
 .imgcontainer {
   background-size: cover;
@@ -98,6 +92,15 @@ footer {
   border: 1px solid #eee;
   transition: transform .1s ease-in-out; }
   .day:hover {
-    transform: scale(1.05); }
+    transform: scale(1.05);
+    color: #E1B900;
+    border-color: #E1B900; }
+    .day:hover h2 {
+      color: #E1B900; }
+
+a {
+  color: #eee; }
+  a:hover {
+    color: #E1B900; }
 
 /*# sourceMappingURL=custom.css.map */
