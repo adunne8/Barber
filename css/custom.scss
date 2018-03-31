@@ -169,15 +169,20 @@ a{
 
 // OPENING HOURS
 .day{
-    border: 1px solid $white;
-
     transition: transform .1s ease-in-out;
+    h2{
+        border-bottom: 1px solid $white;
+    }
+
     &:hover{
         transform: scale(1.05);
+    }
+    &.day-highlight{
         color: $accent;
-        border-color: $accent;
+        
         h2{
             color: $accent;
+            border-color: $accent;
         }
     }
 }

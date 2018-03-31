@@ -113,13 +113,15 @@ a {
   max-width: 220px; }
 
 .day {
-  border: 1px solid #eee;
   transition: transform .1s ease-in-out; }
+  .day h2 {
+    border-bottom: 1px solid #eee; }
   .day:hover {
-    transform: scale(1.05);
-    color: #E1B900;
-    border-color: #E1B900; }
-    .day:hover h2 {
-      color: #E1B900; }
+    transform: scale(1.05); }
+  .day.day-highlight {
+    color: #E1B900; }
+    .day.day-highlight h2 {
+      color: #E1B900;
+      border-color: #E1B900; }
 
 /*# sourceMappingURL=custom.css.map */
