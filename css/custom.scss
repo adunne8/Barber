@@ -13,15 +13,7 @@ body{
     background-image: url("../images/shopshelf.jpeg");
     background-position: center;
 }
-#haircutimg{
-    background-image: url("../images/haircut.jpeg");
-}
-#beardtrimming{
-    background-image: url("../images/beardtrimming.jpeg");
-}
-#hotshaving{
-    background-image: url("../images/hotshaving.jpeg");
-}
+
 #opening{
     background-image: url("../images/shopfloor.jpg");
 
@@ -34,8 +26,6 @@ footer{
         color: $white;
     }
 }
-
-
 
 /* THE WIDTH LIMITER FOR CONTENT */
 .container{
@@ -55,6 +45,10 @@ footer{
         padding: 200px 30px;
     }
     &.section-bg{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
         color: $white;
         h1, h2{
             color: $white;
@@ -62,6 +56,7 @@ footer{
     }
 }
 
+// STANDARD FLEX STYLING
 .flex{
 
     display: flex;
@@ -83,25 +78,69 @@ footer{
     }
 }
 
+// NAVBAR STYLING
 .navbar{
     position: fixed;
     background-color: $darkened;
     width: 100%;
-
+    z-index: 1;
     li{ 
         display: inline-block;
     }
 }
 
+// FONT
+a{
+    color: $white;
+    &:hover{
+        color: $accent;
+    }
+}
+
+
+
+// IMAGE AND CINTAINER STYLING
 .imgcontainer{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    img{
+        flex-shrink:0;
+        min-width:100%;
+        min-height:100%
+    }
 }
 .imgcontainer img{
     min-width: 100%;
     min-height: 100%;
 }
+.img-rounded{
+    border-radius: 50%;
+}
+.img-fill{
+    overflow: hidden;
+    position: relative;
+
+    img{
+        min-width: 100%;
+        min-height: 100%;
+        position: relative;
+        margin: auto;
+        max-width: none;
+    }
+    .img-wide{
+        height: 100%;
+      }
+      
+      .img-tall{
+        width: 100%;
+      }
+}
+
+
+
 .centered{
     text-align: center;
 }
@@ -111,10 +150,8 @@ footer{
 .fixed{
     background-attachment: fixed;
 }
-.img-rounded{
-    border-radius: 50%;
-}
 
+// SERVICES STYLING
 .service{
     max-width: 370px;
     .imgcontainer{
@@ -124,6 +161,13 @@ footer{
     }
 }
 
+// BRAND STYLING
+.brand{
+    min-width: 120px;
+    max-width: 220px;
+}
+
+// OPENING HOURS
 .day{
     border: 1px solid $white;
 
@@ -138,10 +182,7 @@ footer{
     }
 }
 
-// FONT
-a{
-    color: $white;
-    &:hover{
-        color: $accent;
-    }
-}
+
+
+
+

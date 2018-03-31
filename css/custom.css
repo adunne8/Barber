@@ -5,15 +5,6 @@ body {
   background-image: url("../images/shopshelf.jpeg");
   background-position: center; }
 
-#haircutimg {
-  background-image: url("../images/haircut.jpeg"); }
-
-#beardtrimming {
-  background-image: url("../images/beardtrimming.jpeg"); }
-
-#hotshaving {
-  background-image: url("../images/hotshaving.jpeg"); }
-
 #opening {
   background-image: url("../images/shopfloor.jpg"); }
 
@@ -37,6 +28,9 @@ footer {
   .section.section-large {
     padding: 200px 30px; }
   .section.section-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     color: #eee; }
     .section.section-bg h1, .section.section-bg h2 {
       color: #eee; }
@@ -56,18 +50,47 @@ footer {
 .navbar {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.65);
-  width: 100%; }
+  width: 100%;
+  z-index: 1; }
   .navbar li {
     display: inline-block; }
 
+a {
+  color: #eee; }
+  a:hover {
+    color: #E1B900; }
+
 .imgcontainer {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%; }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; }
+  .imgcontainer img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%; }
 
 .imgcontainer img {
   min-width: 100%;
   min-height: 100%; }
+
+.img-rounded {
+  border-radius: 50%; }
+
+.img-fill {
+  overflow: hidden;
+  position: relative; }
+  .img-fill img {
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    margin: auto;
+    max-width: none; }
+  .img-fill .img-wide {
+    height: 100%; }
+  .img-fill .img-tall {
+    width: 100%; }
 
 .centered {
   text-align: center; }
@@ -78,15 +101,16 @@ footer {
 .fixed {
   background-attachment: fixed; }
 
-.img-rounded {
-  border-radius: 50%; }
-
 .service {
   max-width: 370px; }
   .service .imgcontainer {
     width: 270px;
     height: 270px;
     margin: auto; }
+
+.brand {
+  min-width: 120px;
+  max-width: 220px; }
 
 .day {
   border: 1px solid #eee;
@@ -97,10 +121,5 @@ footer {
     border-color: #E1B900; }
     .day:hover h2 {
       color: #E1B900; }
-
-a {
-  color: #eee; }
-  a:hover {
-    color: #E1B900; }
 
 /*# sourceMappingURL=custom.css.map */
