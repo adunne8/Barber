@@ -13,15 +13,7 @@ body{
     background-image: url("../images/shopshelf.jpeg");
     background-position: center;
 }
-#haircutimg{
-    background-image: url("../images/haircut.jpeg");
-}
-#beardtrimming{
-    background-image: url("../images/beardtrimming.jpeg");
-}
-#hotshaving{
-    background-image: url("../images/hotshaving.jpeg");
-}
+
 #opening{
     background-image: url("../images/shopfloor.jpg");
 
@@ -34,8 +26,6 @@ footer{
         color: $white;
     }
 }
-
-
 
 /* THE WIDTH LIMITER FOR CONTENT */
 .container{
@@ -55,6 +45,10 @@ footer{
         padding: 200px 30px;
     }
     &.section-bg{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
         color: $white;
         h1, h2{
             color: $white;
@@ -62,6 +56,7 @@ footer{
     }
 }
 
+// STANDARD FLEX STYLING
 .flex{
 
     display: flex;
@@ -83,58 +78,14 @@ footer{
     }
 }
 
+// NAVBAR STYLING
 .navbar{
     position: fixed;
     background-color: $darkened;
     width: 100%;
-
+    z-index: 1;
     li{ 
         display: inline-block;
-    }
-}
-
-.imgcontainer{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-}
-.imgcontainer img{
-    min-width: 100%;
-    min-height: 100%;
-}
-.centered{
-    text-align: center;
-}
-.shaded{
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);
-}
-.fixed{
-    background-attachment: fixed;
-}
-.img-rounded{
-    border-radius: 50%;
-}
-
-.service{
-    max-width: 370px;
-    .imgcontainer{
-        width: 270px;
-        height: 270px;
-        margin: auto;
-    }
-}
-
-.day{
-    border: 1px solid $white;
-
-    transition: transform .1s ease-in-out;
-    &:hover{
-        transform: scale(1.05);
-        color: $accent;
-        border-color: $accent;
-        h2{
-            color: $accent;
-        }
     }
 }
 
@@ -145,3 +96,98 @@ a{
         color: $accent;
     }
 }
+
+
+
+// IMAGE AND CINTAINER STYLING
+.imgcontainer{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    img{
+        flex-shrink:0;
+        min-width:100%;
+        min-height:100%
+    }
+}
+.imgcontainer img{
+    min-width: 100%;
+    min-height: 100%;
+}
+.img-rounded{
+    border-radius: 50%;
+}
+.img-fill{
+    overflow: hidden;
+    position: relative;
+
+    img{
+        min-width: 100%;
+        min-height: 100%;
+        position: relative;
+        margin: auto;
+        max-width: none;
+    }
+    .img-wide{
+        height: 100%;
+      }
+      
+      .img-tall{
+        width: 100%;
+      }
+}
+
+
+
+.centered{
+    text-align: center;
+}
+.shaded{
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);
+}
+.fixed{
+    background-attachment: fixed;
+}
+
+// SERVICES STYLING
+.service{
+    max-width: 370px;
+    .imgcontainer{
+        width: 270px;
+        height: 270px;
+        margin: auto;
+    }
+}
+
+// BRAND STYLING
+.brand{
+    min-width: 120px;
+    max-width: 220px;
+}
+
+// OPENING HOURS
+.day{
+    transition: transform .1s ease-in-out;
+    h2{
+        border-bottom: 1px solid $white;
+    }
+
+    &:hover{
+        transform: scale(1.05);
+    }
+    &.day-highlight{
+        color: $accent;
+        
+        h2{
+            color: $accent;
+            border-color: $accent;
+        }
+    }
+}
+
+
+
+
+
