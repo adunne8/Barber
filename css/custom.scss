@@ -6,12 +6,20 @@ $accent: #E1B900;
 
 body{
     max-width: 100%;
+    margin: 0 auto;
 }
 
 
 #header{
-    background-image: url("../images/shopshelf.jpeg");
+    
     background-position: center;
+    min-height: 100vh;
+    &.header-index{
+        background-image: url("../images/shopshelf.jpeg");
+    }
+    &.header-services{
+        background-image: url("../images/services_main.jpg");
+    }
 }
 
 #opening{
@@ -81,13 +89,28 @@ footer{
 // NAVBAR STYLING
 .navbar{
     position: fixed;
-    background-color: $darkened;
+    background-color: $black;
     width: 100%;
     z-index: 1;
     li{ 
         display: inline-block;
+        margin: 0 15px;
     }
+    .highlight{
+        transition: all 0.2s;
+        border-bottom:2px solid $accent;
+        position: absolute;
+        top:0;
+
+        left:0;
+        z-index: 10;
+
+        display: block;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2)
+    }
+
 }
+
 
 // FONT
 a{
