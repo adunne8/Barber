@@ -1,9 +1,14 @@
 body {
-  max-width: 100%; }
+  max-width: 100%;
+  margin: 0 auto; }
 
 #header {
-  background-image: url("../images/shopshelf.jpeg");
-  background-position: center; }
+  background-position: center;
+  min-height: 100vh; }
+  #header.header-index {
+    background-image: url("../images/shopshelf.jpeg"); }
+  #header.header-services {
+    background-image: url("../images/services_main.jpg"); }
 
 #opening {
   background-image: url("../images/shopfloor.jpg"); }
@@ -49,11 +54,21 @@ footer {
 
 .navbar {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: #111;
   width: 100%;
   z-index: 1; }
   .navbar li {
-    display: inline-block; }
+    display: inline-block;
+    margin: 0 15px; }
+  .navbar .highlight {
+    transition: all 0.2s;
+    border-bottom: 2px solid #E1B900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
 
 a {
   color: #eee; }
