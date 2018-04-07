@@ -28,6 +28,7 @@ function fitImages() {
 };
 
 function highlightDay(){
+    if(dayElements.length == 0) return;
     const date = new Date();
     const day = date.getDay();
 
@@ -76,6 +77,8 @@ function initialHighlight(){
 
 
 triggers.forEach(trigger => trigger.addEventListener('mouseenter', highlightNav));
+navbar.addEventListener('mouseleave', initialHighlight);
+
 
 highlightDay();
 initialHighlight();
