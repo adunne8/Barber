@@ -30,9 +30,7 @@ function fitImages() {
 function highlightDay(){
     const date = new Date();
     const day = date.getDay();
-
-    console.log(dayElements[day-1].classList.add('day-highlight'));
-
+    dayElements[day-1].classList.add('day-highlight');
 }
 
 function highlightNav(){
@@ -54,7 +52,7 @@ function highlightNav(){
 
 function initialHighlight(){
     const linkCoords = activeNav.getBoundingClientRect();
-    console.log(linkCoords);
+    console.log(linkCoords.left);
     const coords = {
         width: linkCoords.width,
         height: linkCoords.height,
@@ -76,8 +74,15 @@ function initialHighlight(){
 
 
 triggers.forEach(trigger => trigger.addEventListener('mouseenter', highlightNav));
+//triggers.forEach(trigger => trigger.addEventListener('mouseleave', initialHighlight));
+navbar.addEventListener('mouseleave', initialHighlight);
 
-highlightDay();
-initialHighlight();
+
 fitImages();
+highlightDay();
+window.onload = () => {
+    initialHighlight();
+};
+
+
 
